@@ -34,11 +34,33 @@ $(document).ready(function(){
     $('#Logs_form').submit(function(e) {
     e.preventDefault(); // Prevent the default form submission
 
-    var data = $('#loginForm').serializeArray()
+    var data = $('#Logs_form').serializeArray();
 
-    console.log(data);
-    //$('#form_info').html(data);
-    alert(data);
+    data.push(
+        {name: 'action', value: 'add_log'}
+    )
+
+    // AJAX request
+    $.ajax({
+        type: 'POST',
+        url: 'exec/insert.php',
+        data: data,
+        dataType: 'json',
+        success: function(response) {
+            if(response == '1'){
+                alert("working");
+                console.log('working');
+            }
+            else{
+                alert('nah');
+            }
+        }
+                    
+    });
+
+
+
+    
     });
 
    
