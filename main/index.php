@@ -38,7 +38,7 @@ $(document).ready(function(){
 
     console.log(data);
     //$('#form_info').html(data);
-    //alert(data);
+    alert(data);
     });
 
    
