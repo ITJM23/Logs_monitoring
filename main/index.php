@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-    
+    <link href="includes/Bootstrap/css/bootstrap.css" rel="stylesheet">
     <script src="../main/includes/jquery.js"></script>
 
 </head>
 <body>
+    <h5><a href="logs_list.php">Check Table</a></h5>
     <form id="Logs_form" action="k.php" method="post">
     <label for="Log_Title">Title:</label>
     <input type="text" id="Log_Title" name="Log_Title">
@@ -27,6 +28,8 @@
     
 </body>
 
+
+<script src="includes/Bootstrap/js/bootstrap.js"></script>
 <script>
 
 $(document).ready(function(){
